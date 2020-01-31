@@ -18,12 +18,14 @@ app.use(logger())
 app.use(helmet())
 app.use(bodyParser())
 
+require('./api')(app)
+
 async function main(){
   console.info('Loading...')
   console.info('Checking database connection!\n')
-
+  
   await knex.raw('SELECT 1+1 AS RESULT')
-
+  
   const server = app.listen(process.env.PORT)
   console.log(`Server started: http://localhost:${server.address().port}/api`)
 }

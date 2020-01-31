@@ -22,3 +22,5 @@ class Debts extends Model {
         }
     }
 }
+
+module.exports = Debts

@@ -22,3 +22,5 @@ class Goals extends Model {
         }
     }
 }
+
+module.exports = Goals

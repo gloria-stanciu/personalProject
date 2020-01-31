@@ -22,3 +22,5 @@ class inMoney extends Model {
         }
     }
 }
+
+module.exports = inMoney

@@ -22,3 +22,5 @@ class Costs extends Model {
         }
     }
 }
+
+module.exports = Costs

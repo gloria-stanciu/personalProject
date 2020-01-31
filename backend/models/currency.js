@@ -22,3 +22,5 @@ class Currency extends Model {
         }
     }
 }
+
+module.exports = Currency
