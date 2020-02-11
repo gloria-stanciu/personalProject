@@ -1,6 +1,6 @@
 'use strict'
 
-const bcrypt = require('bcrypt')
+const { hash, argon2id } = require('argon2')
 const User = require('../../models/users')
 
 exports.signUp = async ctx => {
@@ -25,7 +25,7 @@ exports.signUp = async ctx => {
   }
 
   //Hash password
-  const password = bcrypt.hash(ctx.request.body.password, 10)
+  const password = await hash(ctx.request.body.password, { type: argon2id })
 
   await User.query().insertGraph({
     fullName: ctx.request.body.fullName,

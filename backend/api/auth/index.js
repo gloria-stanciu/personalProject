@@ -1,11 +1,13 @@
-const {signUp} = require('./auth.signup')
+const { signUp } = require('./auth.signup')
+const { login } = require('./auth.login')
 
-module.exports = Router =>{
+module.exports = Router => {
   const router = new Router({
-    prefix: 'auth'
+    prefix: 'auth',
   })
 
-  router.post('/', signUp)
+  router.post('/register', signUp)
+  router.post('/login', login)
 
   return router
 }
