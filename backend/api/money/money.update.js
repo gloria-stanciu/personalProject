@@ -1,11 +1,12 @@
 'use strict'
 
-const User = require('../../models/users')
+const inMoney = require('../../models/inMoney')
 
 exports.update = async ctx => {
-  const user = await User.query()
+  const money = await inMoney
+    .query()
     .where('id', ctx.params.id)
     .update(ctx.request.body)
 
-  ctx.body = user
+  ctx.body = money
 }

@@ -1,3 +1,5 @@
+'use strict'
+
 const { getAll, getById } = require('./user.get')
 const { update } = require('./user.update')
 const { remove } = require('./user.delete')
