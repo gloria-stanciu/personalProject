@@ -68,6 +68,20 @@ exports.up = function(knex) {
         .onDelete('CASCADE')
         .index()
       column
+        .enum('type', [
+          'Grocery',
+          'Clothes',
+          'Bills',
+          'Health',
+          'Travel',
+          'Gifts',
+          'Emergencies',
+          'Toys',
+          'Car',
+          'Home',
+        ])
+        .notNullable()
+      column
         .decimal('amount', 8, 2)
         .notNullable()
         .defaultTo(0)
@@ -109,7 +123,6 @@ exports.up = function(knex) {
         .inTable('users')
         .onDelete('CASCADE')
         .index()
-      column.string('name').notNullable()
       column
         .enum('type', [
           'Grocery',
