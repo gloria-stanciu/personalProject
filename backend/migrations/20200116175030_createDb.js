@@ -1,12 +1,5 @@
 exports.up = function(knex) {
   return knex.schema
-    .createTable('currency', column => {
-      column
-        .increments('id')
-        .unsigned()
-        .primary()
-      column.string('name').notNullable()
-    })
     .createTable('users', column => {
       column
         .increments('id')
@@ -17,13 +10,6 @@ exports.up = function(knex) {
       column.string('email').notNullable()
       column.string('password').notNullable()
       column.enum('role', ['admin', 'user']).notNullable()
-      column
-        .integer('currency')
-        .unsigned()
-        .references('id')
-        .inTable('currency')
-        .onDelete('CASCADE')
-        .index()
       column
         .decimal('inMoney', 8, 2)
         .notNullable()
