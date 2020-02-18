@@ -2,9 +2,9 @@
 
 const { Model } = require('objection')
 
-class inMoney extends Model {
+class totalMoney extends Model {
     static get tableName() {
-        return 'inMoney'
+        return 'totalMoney'
     }
 
     static get relationMappings() {
@@ -15,7 +15,7 @@ class inMoney extends Model {
                 relation: Model.BelongsToOneRelation,
                 modelClass: Users,
                 join: {
-                    from: 'inMoney.userId',
+                    from: 'totalMoney.userId',
                     to: 'users.id',
                 },
             },
@@ -23,4 +23,4 @@ class inMoney extends Model {
     }
 }
 
-module.exports = inMoney
+module.exports = totalMoney

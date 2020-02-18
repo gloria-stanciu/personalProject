@@ -3,6 +3,7 @@
 const { hash, argon2id } = require('argon2')
 const User = require('../../models/users')
 
+
 exports.signUp = async ctx => {
   //Check if a user with the same username or email already exists
   const isUser = await User.query()

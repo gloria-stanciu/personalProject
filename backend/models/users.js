@@ -8,18 +8,18 @@ class User extends Model {
   }
 
   static get relationMappings() {
-    const inMoney = require('./inMoney')
+    const totalMoney = require('./totalMoney')
     const Debts = require('./debts')
     const Goals = require('./goals')
     const Costs = require('./costs')
 
     return {
-      inMoney: {
+      totalMoney: {
         relation: Model.HasManyRelation,
-        modelClass: inMoney,
+        modelClass: totalMoney,
         join: {
           from: 'users.id',
-          to: 'inMoney.userId',
+          to: 'totalMoney.userId',
         },
       },
       debts: {

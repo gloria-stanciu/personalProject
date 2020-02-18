@@ -1,6 +1,7 @@
 'use strict'
 
 const Costs = require('../../models/costs')
+const { substractCosts } = require('../../middleware/updateUser.middleware')
 
 exports.create = async ctx => {
   const cost = await Costs.query().insertGraph({
@@ -10,6 +11,7 @@ exports.create = async ctx => {
     date: ctx.request.body.date,
     location: ctx.request.body.location,
   })
+  await substractCosts(cost)
 
   ctx.body = { message: 'Cost added successfully', inserted: cost }
 }

@@ -1,13 +1,13 @@
 'use strict'
 
-const inMoney = require('../../models/inMoney')
+const totalMoney = require('../../models/totalMoney')
 
 exports.getAll = async ctx => {
-  const money = await inMoney.query().where('userId', ctx.params.userId)
+  const money = await totalMoney.query().where('userId', ctx.params.userId)
   ctx.body = money
 }
 
 exports.getById = async ctx => {
-  const money = await inMoney.query().where('id', ctx.params.id)
+  const money = await totalMoney.query().where('id', ctx.params.id)
   ctx.body = money
 }

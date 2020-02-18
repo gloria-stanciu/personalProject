@@ -1,4 +1,4 @@
-exports.up = function(knex) {
+exports.up = function (knex) {
   return knex.schema
     .createTable('users', column => {
       column
@@ -11,7 +11,7 @@ exports.up = function(knex) {
       column.string('password').notNullable()
       column.enum('role', ['admin', 'user']).notNullable()
       column
-        .decimal('inMoney', 8, 2)
+        .decimal('totalMoney', 8, 2)
         .notNullable()
         .defaultTo(0)
       column
@@ -24,7 +24,7 @@ exports.up = function(knex) {
         .defaultTo(0)
       column.boolean('verified').defaultTo(false)
     })
-    .createTable('inMoney', column => {
+    .createTable('totalMoney', column => {
       column
         .increments('id')
         .unsigned()
@@ -132,6 +132,6 @@ exports.up = function(knex) {
     })
 }
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.schema.dropTable('users')
 }
