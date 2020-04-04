@@ -1,5 +1,6 @@
 'use strict'
 
+const knex = require('knex')
 const User = require('../../models/users')
 
 exports.getAll = async ctx => {

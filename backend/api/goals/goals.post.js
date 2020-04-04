@@ -1,17 +1,18 @@
 'use strict'
 
 const Goals = require('../../models/goals')
+const { countGoals } = require('../../middleware/updateUser.middleware')
 
 exports.create = async ctx => {
-  const goals = await Goals.query().insertGraph({
+  const goal = await Goals.query().insertGraph({
     userId: ctx.params.userId,
     title: ctx.request.body.title,
     description: ctx.request.body.description,
-    amount: ctx.request.body.amount,
+    targetedAmount: ctx.request.body.targetedAmount,
     startDate: ctx.request.body.startDate,
     endDate: ctx.request.body.endDate,
     reached: ctx.request.body.reached,
   })
-
-  ctx.body = { message: 'Money added successfully', inserted: goals }
+  await countGoals(ctx.params.userId, goal)
+  ctx.body = { message: 'Money added successfully', inserted: goal }
 }

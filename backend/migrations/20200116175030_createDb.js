@@ -22,6 +22,7 @@ exports.up = function (knex) {
         .decimal('totalCosts', 8, 2)
         .notNullable()
         .defaultTo(0)
+      column.integer('goalsNumber').defaultTo(0)
       column.boolean('verified').defaultTo(false)
     })
     .createTable('totalMoney', column => {
@@ -90,9 +91,10 @@ exports.up = function (knex) {
       column.string('title').notNullable()
       column.text('description').notNullable()
       column
-        .decimal('amount', 8, 2)
+        .decimal('targetedAmount', 8, 2)
         .notNullable()
         .defaultTo(0)
+      column.decimal('amount', 8, 2).notNullable().defaultTo(0)
       column.date('startDate').notNullable()
       column.date('endDate').notNullable()
       column.boolean('reached').defaultTo(false)
@@ -127,7 +129,7 @@ exports.up = function (knex) {
         .decimal('amount', 8, 2)
         .notNullable()
         .defaultTo(0)
-      column.date('date')
+      column.date('date').notNullable()
       column.string('location').notNullable()
     })
 }
