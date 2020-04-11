@@ -37,6 +37,7 @@ exports.up = function (knex) {
         .inTable('users')
         .onDelete('CASCADE')
         .index()
+      column.string('type').notNullable()
       column
         .decimal('amount', 8, 2)
         .notNullable()
@@ -55,24 +56,12 @@ exports.up = function (knex) {
         .onDelete('CASCADE')
         .index()
       column
-        .enum('type', [
-          'Grocery',
-          'Clothes',
-          'Bills',
-          'Health',
-          'Travel',
-          'Gifts',
-          'Emergencies',
-          'Toys',
-          'Car',
-          'Home',
-        ])
-        .notNullable()
+        .string('type').notNullable()
       column
         .decimal('amount', 8, 2)
         .notNullable()
         .defaultTo(0)
-      column.date('startDate').notNullable()
+      column.string('toWhom').notNullable()
       column.date('endDate').notNullable()
       column.boolean('notification').defaultTo(false)
       column.boolean('returned').defaultTo(false)
@@ -95,7 +84,6 @@ exports.up = function (knex) {
         .notNullable()
         .defaultTo(0)
       column.decimal('amount', 8, 2).notNullable().defaultTo(0)
-      column.date('startDate').notNullable()
       column.date('endDate').notNullable()
       column.boolean('reached').defaultTo(false)
     })
@@ -112,19 +100,7 @@ exports.up = function (knex) {
         .onDelete('CASCADE')
         .index()
       column
-        .enum('type', [
-          'Grocery',
-          'Clothes',
-          'Bills',
-          'Health',
-          'Travel',
-          'Gifts',
-          'Emergencies',
-          'Toys',
-          'Car',
-          'Home',
-        ])
-        .notNullable()
+        .string('type').notNullable()
       column
         .decimal('amount', 8, 2)
         .notNullable()

@@ -7,6 +7,7 @@ const { addTotalMoney } = require('../../middleware/updateUser.middleware')
 exports.addMoney = async ctx => {
   const money = await totalMoney.query().insertGraph({
     userId: ctx.params.userId,
+    type: ctx.request.body.type,
     amount: ctx.request.body.amount,
     details: ctx.request.body.details,
   })

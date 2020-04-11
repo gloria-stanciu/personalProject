@@ -8,7 +8,7 @@ exports.create = async ctx => {
     userId: ctx.params.userId,
     type: ctx.request.body.type,
     amount: ctx.request.body.amount,
-    startDate: ctx.request.body.startDate,
+    toWhom: ctx.request.body.toWhom,
     endDate: ctx.request.body.endDate,
     notification: ctx.request.body.notification,
     returned: ctx.request.body.returned,

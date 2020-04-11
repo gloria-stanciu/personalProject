@@ -9,7 +9,7 @@ exports.create = async ctx => {
     title: ctx.request.body.title,
     description: ctx.request.body.description,
     targetedAmount: ctx.request.body.targetedAmount,
-    startDate: ctx.request.body.startDate,
+    amount: ctx.request.body.amount,
     endDate: ctx.request.body.endDate,
     reached: ctx.request.body.reached,
   })
