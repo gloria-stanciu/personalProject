@@ -3,9 +3,7 @@
 <HeaderAndPageBackground msg="Amounts">
 </HeaderAndPageBackground>
  <div>
-    <h1>Manage your money!</h1>
-    <h2>Easy, fast and all in one place!</h2>
-    <h3>Track your debts, create goals and keep track of your costs.<br>Sign up now!</h3>
+    <h1>Sign up!</h1>
   </div>
 </body>
 </template>
@@ -16,7 +14,7 @@ import HeaderAndPageBackground from "@/components/HeaderAndPageBackground.vue";
 
 
 export default {
-  name: "Default",
+  name: "SignUp",
   components: {
   HeaderAndPageBackground
   }
@@ -29,20 +27,9 @@ div{
   color:  rgba(63, 63, 63, 0.88);
 }
 h1{
-  font-size: 90px;
+  font-size: 41px;
   font-weight: lighter;
-  padding-top: 120px;
-}
-h2{
-  font-size: 40px;
-  font-weight: lighter;
-  padding-top: 20px;
-}
-h3{
-  font-size: 30px;
-  font-weight: lighter;
-  padding-top: 150px;
-  padding-bottom: 100px;
+  padding-top: 50px;
 }
 body{
   margin-top: 150px;
