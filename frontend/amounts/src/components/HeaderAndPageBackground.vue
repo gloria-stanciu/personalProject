@@ -35,7 +35,7 @@ a{
 }
 div{
   background-color: #138f56;
-  font-weight: 100;
+  font-weight: 700;
   font-size: 24px;
   text-align: left;
   color: #ffffff;

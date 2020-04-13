@@ -1,5 +1,5 @@
 <template>
-    <button >{{name}}</button>
+    <button  >{{name}}</button>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
 
 <style scoped>
    button{
-     /* background-color: #ffffff; */
+     background-color: #ffffff;
      padding: 10px 10px;
      cursor: pointer;
      border: none;

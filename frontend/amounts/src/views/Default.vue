@@ -46,9 +46,12 @@ h3{
 }
 body{
   margin-top: 150px;
-  width: 100%;
-  height: auto;
+  margin-bottom: auto;
   background: url(../assets/Coins.png);
-  background-size: initial;
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  min-height: 100%;
 }
 </style>
