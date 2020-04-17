@@ -5,13 +5,12 @@
  <div>
     <h1>Manage your money!</h1>
     <h2>Easy, fast and all in one place!</h2>
-    <h3>Track your debts, create goals and keep track of your costs.<br>Sign up now!</h3>
+    <h3>Track your debts, create goals and keep track of your costs.<br><span style="color: #138f56">Sign up now!</span></h3>
   </div>
 </body>
 </template>
 
 <script>
-// @ is an alias to /src
 import HeaderAndPageBackground from "@/components/HeaderAndPageBackground.vue";
 
 

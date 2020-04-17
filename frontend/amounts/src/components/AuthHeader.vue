@@ -1,25 +1,27 @@
 <template>
   <header>
     <div>
-        <a>
-            <router-link to="/">{{ msg }}</router-link>
-        </a>
+        <a>{{ msg }}</a>
+        <Button name="Income"/>
+        <Button name="Costs"/>
+        <Button name="Debts"/>
+        <Button name="Goals"/>
     </div>
-    <ul>
-      <li> <router-link to="/signUp"><ButtonWhite name="Sign up!"/></router-link></li>
-      <li> <router-link to="/login"><ButtonWhite name="Log in!"/></router-link></li>
+    <ul class="list-right">
+      <li class="rigth"><router-link to="/home"><img src="../assets/HomeButton.png"></router-link></li>
+      <li class="right"><router-link to="/login"><img src="../assets/MyProfileButton.png"></router-link></li>
     </ul>
   </header>
 </template>
 
 
 <script>
-import ButtonWhite from "@/components/ButtonWhite.vue";
+import Button from "@/components/Button.vue";
 
 export default {
-  name: "HeaderAndPageBackground",
+  name: "AuthHeader",
   components:{
-    ButtonWhite
+    Button
   },
   props: {
     msg: String,
@@ -30,8 +32,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 a{
+    position: relative;
     color: #fff;
     text-decoration: none;
+    padding-right: 45px;
 }
 div{
   background-color: #138f56;
@@ -42,29 +46,26 @@ div{
   display: inline-flex;
   padding-left:70px;
 }
-
 body{
-  margin-top: 150px;
-  width: 100%;
-  height: auto; /* Used in this example to enable scrolling */
-  background: url(../assets/Coins.png);
-  background-size: initial;
+    position: fixed;
+    width: 100%;
+    height: auto; /* Used in this example to enable scrolling */
+    background-size: initial;
 }
 header{
-  display: inline-block;
   position: fixed;
   background-color: #138F56;
   top: 0px;
   margin: 0px auto;
   padding: 5px;
   width: 100%;
+  min-width: 800px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 ul{
-  position: relative;
-  float: right;
+    float:right;
   list-style-type: none;
-  padding-right: 70px;
+  padding-top: 5px;
   margin: 0;
   text-align: right;
 }

@@ -2,7 +2,7 @@
 
 const Joi = require('@hapi/joi')
 
-exports.create = async (ctx, next) => {
+exports.goalsValidate = async (ctx, next) => {
     const schema = Joi.object({
         title: Joi.string().max(50).required(),
         description: Joi.string().required(),

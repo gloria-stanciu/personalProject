@@ -8,35 +8,58 @@
     <form>
       <label>Fullname</label>
       <br>
-      <input v-model="fullname" placeholder="John SMITH">
+      <input v-model="reg.fullName" type="text" placeholder="John SMITH" required>
       <br>
       <label>Username</label>
       <br>
-      <input v-model="username" placeholder="john.smith">
+      <input v-model="reg.username" type="text" placeholder="john.smith" required>
       <br>
       <label>Email</label>
       <br>
-      <input v-model="email" placeholder="john.smith@email.com">
+      <input v-model="reg.email" type="text" placeholder="john.smith@email.com" required>
       <br>
       <label>Password</label>
       <br>
-      <input v-model="password" type="password" placeholder="*****">
+      <input v-model="reg.password" type="password" placeholder="*****" required>
     </form>
       <br><br>
-      <button> Create account!</button>
+      <ButtonGreen @click="signUp" name="Create account!"></ButtonGreen>
   </div>
 </body>
 </template>
 
 <script>
 // @ is an alias to /src
+import ButtonGreen from "@/components/ButtonGreen.vue"
 import HeaderAndPageBackground from "@/components/HeaderAndPageBackground.vue";
-import Button from "@/components/Button.vue"
+import { mapActions, mapState } from 'vuex'
 
 export default {
-  name: "SignUp",
+  name: "signUp",
   components: {
-  HeaderAndPageBackground
+    HeaderAndPageBackground,
+    ButtonGreen
+  },
+  data: function(){
+    return{
+      reg: {
+        fullName: '',
+        username: '',
+        email: '',
+        password: ''}
+      }
+  },
+  methods:{
+     ...mapActions(['register']),
+    signUp: async function(){
+      try{
+        const signUp = await this.register(this.reg)
+        if(signUp == true)
+          this.$router.push({name: "LogIn"})
+      }catch(err){
+        this.error = err
+      }
+    },
   }
 };
 </script>
@@ -47,7 +70,8 @@ div{
   text-align: center;
 }
 form{
-  border: 1.5px solid #DEE4E1;
+  // border: 1.5px solid #DEE4E1;
+  box-shadow: 1px 1px 4px 4px #DEE4E1;
   border-radius: 5px;
   background-color: #fff;
   display: inline-block;
@@ -72,8 +96,7 @@ input{
 label{
   padding-top: 10px;
   font-size: 20px;
-  font-weight: 600;
-  
+  font-weight: 600; 
 }
 h1{
   font-size: 41px;
@@ -92,18 +115,5 @@ body{
   left: 0; 
   min-width: 100%;
   min-height: 100%; 
-}
-button{
-  background-color: #138F56;
-  cursor: pointer;
-  color: #fff;
-  font-weight: 600;
-  font-size: 15px;
-  width: 20%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
 }
 </style>

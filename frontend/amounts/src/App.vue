@@ -10,8 +10,8 @@
 *{
   margin: 0;
   padding: 0;
-}
-#app {
  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+// #app {
+// }
 </style>

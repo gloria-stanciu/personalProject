@@ -2,7 +2,7 @@
 
 const Joi = require('@hapi/joi')
 
-exports.create = async (ctx, next) => {
+exports.moneyValidate = async (ctx, next) => {
     const schema = Joi.object({
         amount: Joi.number().positive().required(),
     })

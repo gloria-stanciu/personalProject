@@ -1,5 +1,5 @@
 <template>
-    <button  >{{name}}</button>
+    <button type = "type">{{name}}</button>
 </template>
 
 <script>
@@ -7,22 +7,22 @@ export default {
     name: "Button",
     props:{
         name: String,
+        type: String
     }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
    button{
-     background-color: #ffffff;
-     padding: 10px 10px;
-     cursor: pointer;
-     border: none;
-     border-radius: 5px;
-     color: #138F56;
-     font-weight: 600;
-     position: relative;
-     font-size: 15px;
-     text-align: center;
-     margin: 2px 2px;
+       background: none;
+        cursor: pointer;
+        color: #fff;
+        font-size: 20px;
+        width: 20%;
+        padding: 0px 20px;
+        margin: 0px 0;
+        border: none;
+        border-radius: 5px;
+        margin-top: 0px;
    }
 </style>

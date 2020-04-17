@@ -4,6 +4,7 @@ const { getAll, getById } = require('./money.get')
 const { addMoney } = require('./money.post')
 const { update } = require('./money.update')
 const { remove } = require('./money.delete')
+const { moneyValidate } = require('./money.validate')
 
 module.exports = Router => {
   const router = new Router({
@@ -12,7 +13,7 @@ module.exports = Router => {
 
   router.get('/:userId', getAll)
   router.get('/details/:id', getById)
-  router.post('/:userId', addMoney)
+  router.post('/:userId', moneyValidate, addMoney)
   router.put('/:id', update)
   router.delete('/:id', remove)
 

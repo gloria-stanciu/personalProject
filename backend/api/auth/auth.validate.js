@@ -2,7 +2,7 @@
 
 const Joi = require('@hapi/joi')
 
-exports.signUp = async (ctx, next) => {
+exports.signUpValidate = async (ctx, next) => {
     const schema = Joi.object({
         fullName: Joi.string().min(4).max(100).required().error(() => new Error('Full name must be between 4 and 100 characters.')),
         username: Joi.string().min(4).max(100).required().error(() => new Error('Username must be between 4 and 100 characters.')),
@@ -18,7 +18,7 @@ exports.signUp = async (ctx, next) => {
     await next()
 }
 
-exports.logIn = async (ctx, next) => {
+exports.logInValidate = async (ctx, next) => {
     const schema = Joi.object({
         username: Joi.string().required().error(() => new Error('Username is required')),
         password: Joi.string().required().error(() => new Error('Password is required'))

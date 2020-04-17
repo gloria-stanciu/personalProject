@@ -22,7 +22,7 @@ exports.login = async ctx => {
 
     return {
       status: (ctx.status = 200),
-      message: (ctx.message = 'Login successfully!'),
+      message: (ctx.message = token),
     }
   }
   return {
