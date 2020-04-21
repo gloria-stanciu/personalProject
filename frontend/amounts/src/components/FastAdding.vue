@@ -18,7 +18,7 @@
 <script>
 import ButtonGreen from "@/components/ButtonGreen.vue"
 export default {
-  name: "Balance",
+  name: "FastAdding",
   components:{
       ButtonGreen
   },
@@ -33,9 +33,11 @@ export default {
 <style scoped lang="scss">
 .button1{
     float:left;
+    width: 45%;
 }
 .button2{
     float: right;
+    width: 45%;
 }
 label{
   padding-top: 10px;
@@ -43,21 +45,20 @@ label{
   color: #3F3F3F;
 }
 form{
-    // border: 1.5px solid #DEE4E1;
   display: inline-block;
   color:  rgba(63, 63, 63, 0.88);
-  margin: 8px 0;
+  // margin: 8px 0px;
   text-align: left;
 }
 input{
     display: inline-block;
-  font-size: 18px;
-  padding: 12px 12px;
-  margin: 8px 0;
-  border: 0.5px solid #DEE4E1;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
+    font-size: 18px;
+    padding: 5px 8px;
+    margin: 8px 0;
+    border: 0.5px solid #DEE4E1;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 header{
     border-radius: 5px;
@@ -65,11 +66,11 @@ header{
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
-    min-width: 396px;
-    min-height: 217px;
-    padding: 11px 12px 5px;
-    margin: 8px 0;
+    margin-top: 100%;
+    min-width: 376px;
+    width: 376px;
+    padding: 5px 10px;
+    margin: 4px 0;
     text-align: left;
 }
 </style>
