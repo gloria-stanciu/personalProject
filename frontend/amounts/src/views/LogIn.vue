@@ -3,26 +3,25 @@
 <HeaderAndPageBackground msg="Amounts">
 </HeaderAndPageBackground>
   <h1>Log in!</h1>
-   <div class="card-header">
+   <div>
     <br>
-    <form >
-      <label>Username</label>
+    <v-form class="vue-form" ref="form" v-model="valid" lazy-validation>
+       <label>Username</label>
       <br>
       <input v-model="auth.username" placeholder="john.smith">
       <br>
       <label>Password</label>
       <br>
       <input v-model="auth.password" type="password" placeholder="*****">
-    </form>
+    </v-form>
       <br><br>
-      <ButtonGreen @click="login" name="Log in!"></ButtonGreen>
+      <v-btn depressed large color=#138F56 class="white--text"  @click="login">Log in!</v-btn>
   </div>
 </body>
 </template>
 
 <script>
 // @ is an alias to /src
-import ButtonGreen from '@/components/ButtonGreen.vue'
 import HeaderAndPageBackground from "@/components/HeaderAndPageBackground.vue";
 import{mapActions} from 'vuex'
 
@@ -30,9 +29,8 @@ export default {
   name: "logIn",
   components: {
   HeaderAndPageBackground,
-  ButtonGreen
   },
-  data: function(){
+  data(){
     return{
       auth: {
         username: '',
@@ -57,17 +55,19 @@ export default {
 
 <style scoped lang="scss">
 div{
-  display: block;
   text-align: center;
 }
-form{
-  // border: 1.5px solid #DEE4E1;
+.white--text{
+  color: #fff !important;
+  font-weight: 700;
+  width: 20%;
+  border-radius: 5px;
+}
+.vue-form{
   box-shadow: 1px 1px 4px 4px #DEE4E1;
   border-radius: 5px;
   background-color: #fff;
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
   color:  rgba(63, 63, 63, 0.88);
   width: 20%;
   padding: 12px;
@@ -75,7 +75,6 @@ form{
   text-align: left;
 }
 input{
-  display: inline-block;
   font-size: 18px;
   padding: 12px 12px;
   margin: 8px 0;
@@ -87,8 +86,7 @@ input{
 label{
   padding-top: 10px;
   font-size: 20px;
-  font-weight: 600;
-  
+  font-weight: 600;  
 }
 h1{
   font-size: 41px;
@@ -100,12 +98,9 @@ h1{
 }
 body{
   margin-top: 150px;
-  margin-bottom: 150px;
   background: url(../assets/Coins.png);
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  min-width: 100%;
-  min-height: 100%; 
+  position: fixed;  
+  width: 100%;
+  height: 100%; 
 }
 </style>

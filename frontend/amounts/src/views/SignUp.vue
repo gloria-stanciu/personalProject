@@ -5,7 +5,7 @@
   <h1>Sign up!</h1>
   <div>
     <br>
-    <form>
+    <v-form class="vue-form" ref="form" v-model="valid" lazy-validation>
       <label>Fullname</label>
       <br>
       <input v-model="reg.fullName" type="text" placeholder="John SMITH" required>
@@ -21,9 +21,9 @@
       <label>Password</label>
       <br>
       <input v-model="reg.password" type="password" placeholder="*****" required>
-    </form>
+    </v-form>
       <br><br>
-      <ButtonGreen @click="signUp" name="Create account!"></ButtonGreen>
+      <v-btn depressed large color=#138F56 class="white--text"  @click="signUp">Create account!</v-btn>
   </div>
 </body>
 </template>
@@ -38,7 +38,6 @@ export default {
   name: "signUp",
   components: {
     HeaderAndPageBackground,
-    ButtonGreen
   },
   data: function(){
     return{
@@ -65,18 +64,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.white--text{
+  color: #fff !important;
+  font-weight: 700;
+  width: 20%;
+  border-radius: 5px;
+}
 div{
-  display: block;
   text-align: center;
 }
-form{
-  // border: 1.5px solid #DEE4E1;
+.vue-form{
   box-shadow: 1px 1px 4px 4px #DEE4E1;
   border-radius: 5px;
   background-color: #fff;
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
   color:  rgba(63, 63, 63, 0.88);
   width: 20%;
   padding: 12px;
@@ -84,7 +85,6 @@ form{
   text-align: left;
 }
 input{
-  display: inline-block;
   font-size: 18px;
   padding: 12px 12px;
   margin: 8px 0;
@@ -108,11 +108,8 @@ h1{
 }
 body{
   margin-top: 150px;
-  margin-bottom: 150px;
   background: url(../assets/Coins.png);
   position: fixed; 
-  top: 0; 
-  left: 0; 
   min-width: 100%;
   min-height: 100%; 
 }

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div><span class="Balance">Balance</span> <a>{{amount}}$</a></div>
+    <div><span class="Balance">Balance</span> <a>{{amount}}</a></div>
   </header>
 </template>
 
