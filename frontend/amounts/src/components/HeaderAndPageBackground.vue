@@ -5,7 +5,7 @@
     </span>
     <v-spacer></v-spacer>
       <v-btn style="float:right; margin-right:60px; font-weight: 700; color:#138F56" depressed regular color=#fff>
-        <router-link style="text-decoration:none; color:#138f56" to="/signUp">Sign up</router-link>
+        <router-link style="text-decoration:none; color:#138f56" to="/signup">Sign up</router-link>
       </v-btn>
       <v-btn style="float:right; margin-right:60px; font-weight: 700; color:#138F56" depressed regular color=#fff class="#138F56--text">
         <router-link style="text-decoration:none; color:#138f56" to="/login">Log in</router-link>

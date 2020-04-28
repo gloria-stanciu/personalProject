@@ -38,11 +38,11 @@ header{
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 31px;
     color:  rgba(63, 63, 63, 0.88);
-    min-width: 645px;
     min-height: 135px;
-    width: 645px;
-    // margin: 8px 0;
+    width: 100%;
+    height: 100%;
     text-align: left;
     }
 div{

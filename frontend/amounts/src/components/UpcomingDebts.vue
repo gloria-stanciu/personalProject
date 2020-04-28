@@ -72,12 +72,13 @@ header{
     margin-left: auto;
     margin-right: auto;
     color:  rgba(63, 63, 63, 0.88);
-    min-width: 376px;
+    // min-width: 376px;
     min-height: 200px;
-    width: 376px;
+    width: 100%;
+    height: 100%;  
     padding: 5px 10px;
-    // margin: 8px 0;
     text-align: left;
+    margin-bottom: 35px;
     }
 div{
     font-size: 24px;

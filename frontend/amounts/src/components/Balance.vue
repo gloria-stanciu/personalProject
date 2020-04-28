@@ -28,10 +28,10 @@ header{
     margin-left: auto;
     margin-right: auto;
     color:  rgba(63, 63, 63, 0.88);
-    min-width: 376px;
-    width: 376px;
+    width: 100%;
+    height: 100%;
     padding: 5px 10px;
-    // margin: 8px 0;
+    margin-bottom: 35px;
     text-align: left;
 }
 div{

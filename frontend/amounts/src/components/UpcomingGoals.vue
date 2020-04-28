@@ -69,11 +69,9 @@ header{
     margin-left: auto;
     margin-right: auto;
     color:  rgba(63, 63, 63, 0.88);
-    min-width: 376px;
-    min-height: 200px;
-    width: 376px;
+    height: 100%;
+    width: 100%;
     padding: 5px 10px;
-    // margin: 8px 0;
     text-align: left;
     }
 div{

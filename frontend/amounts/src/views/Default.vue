@@ -1,5 +1,6 @@
 <template>
-<body>
+<body >
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 <HeaderAndPageBackground msg="Amounts">
 </HeaderAndPageBackground>
  <div>
@@ -23,6 +24,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media(max-width: 50%){
+ h1{
+   font-size: 60px;
+   font-weight: lighter;
+    padding-top: 120px;
+ }
+}
 div{
   text-align: center;
   color:  rgba(63, 63, 63, 0.88);
@@ -52,5 +60,6 @@ body{
   left: 0; 
   min-width: 100%;
   min-height: 100%;
+  float: center;
 }
 </style>

@@ -40,7 +40,7 @@ header{
     color:  rgba(63, 63, 63, 0.88);
     min-width: 645px;
     min-height: 339px;
-    width: 645px;
+    width: 100%;
     padding: 5px 10px;
     // margin: 8px 0;
     text-align: left;

@@ -40,9 +40,10 @@ header{
     color:  rgba(63, 63, 63, 0.88);
     min-width: 645px;
     min-height: 309px;
-    width: 645px;
+    width: 100%;
+    height: 100%;
     padding: 5px 10px;
-    // margin: 8px 0;
+    margin-bottom: 31px;
     text-align: left;
     }
 div{

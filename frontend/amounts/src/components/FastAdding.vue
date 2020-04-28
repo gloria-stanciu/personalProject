@@ -66,11 +66,10 @@ header{
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100%;
-    min-width: 376px;
-    width: 376px;
+    width: 100%;
+    height: 100%;
     padding: 5px 10px;
-    margin: 4px 0;
+    margin-bottom: 35px;
     text-align: left;
 }
 </style>

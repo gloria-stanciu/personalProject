@@ -87,8 +87,7 @@ header{
     margin-left: auto;
     margin-right: auto;
     color:  rgba(63, 63, 63, 0.88);
-    min-width: 688px;
-    width: 688px;
+    width: 100%;
     height: 845px;
     padding: 5px 10px;
     // margin: 10px 0;
