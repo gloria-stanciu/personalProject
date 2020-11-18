@@ -1,6 +1,6 @@
 <template>
 <body>
-<AuthHeader msg="AMOUNTS"></AuthHeader>
+<HomeHeader msg="AMOUNTS"></HomeHeader>
 <div class="container">
 <div class="box1">
   <div><Balance amount="120$"></Balance></div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import AuthHeader from "@/components/AuthHeader.vue"
+import HomeHeader from "@/components/HomeHeader.vue"
 import Balance from "@/components/Balance.vue"
 import FastAdding from "@/components/FastAdding.vue"
 import UpcomingDebts from "@/components/UpcomingDebts.vue"
@@ -34,7 +34,7 @@ import Graph from "@/components/Graph.vue"
   export default {
     name: 'Home',
     components: {
-      AuthHeader,
+      HomeHeader,
       Balance,
       FastAdding,
       UpcomingDebts,

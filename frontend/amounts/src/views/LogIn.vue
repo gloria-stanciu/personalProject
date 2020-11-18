@@ -5,7 +5,7 @@
   <h1>Log in!</h1>
    <div>
     <br>
-    <v-form class="vue-form" ref="form" v-model="valid" lazy-validation>
+    <v-form class="vue-form" ref="form" lazy-validation>
        <label>Username</label>
       <br>
       <input v-model="auth.username" placeholder="john.smith">
